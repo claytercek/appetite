@@ -1,0 +1,617 @@
+/*#region fonts*/
+@font-face {
+	font-family: "Quicksand";
+	src: url("../fonts/Quicksand-Bold.woff2") format("woff2"),
+		url("../fonts/Quicksand-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Quicksand";
+	src: url("../fonts/Quicksand-Medium.woff2") format("woff2"),
+		url("../fonts/Quicksand-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Quicksand";
+	src: url("../fonts/Quicksand-Regular.woff2") format("woff2"),
+		url("../fonts/Quicksand-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Quicksand";
+	src: url("../fonts/Quicksand-Light.woff2") format("woff2"),
+		url("../fonts/Quicksand-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("../fonts/HelveticaNeueMedium.woff2") format("woff2"),
+		url("../fonts/HelveticaNeueMedium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("../fonts/HelveticaNeueBlackCond.woff2") format("woff2"),
+		url("../fonts/HelveticaNeueBlackCond.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("../fonts/HelveticaNeueLight.woff2") format("woff2"),
+		url("../fonts/HelveticaNeueLight.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("../fonts/HelveticaNeueBold.woff2") format("woff2"),
+		url("../fonts/HelveticaNeueBold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("../fonts/HelveticaNeueRegular.woff2") format("woff2"),
+		url("../fonts/HelveticaNeueRegular.woff") format("woff");
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("../fonts/HelveticaNeueMedium.woff2") format("woff2"),
+		url("../fonts/HelveticaNeueMedium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("../fonts/HelveticaNeueItalic.woff2") format("woff2"),
+		url("../fonts/HelveticaNeueItalic.woff") format("woff");
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("../fonts/HelveticaNeueHeavy.woff2") format("woff2"),
+		url("../fonts/HelveticaNeueHeavy.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("../fonts/HelveticaNeueThin.woff2") format("woff2"),
+		url("../fonts/HelveticaNeueThin.woff") format("woff");
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("../fonts/HelveticaNeueLight.woff2") format("woff2"),
+		url("../fonts/HelveticaNeueLight.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("../fonts/HelveticaNeueBold.woff2") format("woff2"),
+		url("../fonts/HelveticaNeueBold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+/*#endregion RegionName*/
+
+html {
+	font-size: 100%;
+	color: #303236;
+}
+
+* {
+	box-sizing: border-box;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+header {
+	z-index: 1;
+	background-color: #05386b;
+	position: fixed;
+	display: flex;
+	top: 0;
+	width: 100%;
+	padding: 0.5rem 1rem;
+	justify-content: space-between;
+	align-content: center;
+	overflow: hidden;
+	height: 4rem;
+}
+
+#logo {
+	font-family: "Quicksand", sans-serif;
+	color: white;
+	margin: 0;
+	flex-grow: 1;
+}
+
+a h1 {
+	margin: 0;
+}
+
+.searchIcon {
+	margin-top: 0.3rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	cursor: pointer;
+}
+
+div.search {
+	position: absolute;
+	transition: all 0.3s ease;
+	left: 100%;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	width: 100%;
+	background-color: #05386b;
+	z-index: 10;
+	text-align: center;
+}
+
+header.search div.search {
+	left: 0;
+	width: 100%;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	padding: 0 1rem;
+}
+
+div.search input {
+	color: #05386b;
+	font-family: "Quicksand", sans-serif;
+	border: none;
+	border-radius: 0.7rem;
+	font-size: 1.5rem;
+	background: white url("../images/icons/search_blue.svg") 0.5rem center
+		no-repeat;
+	width: calc(100% - 4.2rem);
+	padding: 0.3rem 0.5rem;
+	padding-left: 2.5rem;
+}
+
+header.search input {
+	width: 50%;
+	flex-grow: 1;
+	margin: 0 0.5rem;
+}
+
+div.search img {
+	cursor: pointer;
+	position: relative;
+	/* top: 0.7rem; */
+	height: 2.5rem;
+	width: 2.5rem;
+}
+
+div.search #logo {
+	text-align: left;
+	display: none;
+	flex-grow: 0;
+	margin-right: 2rem;
+}
+
+main {
+	padding-top: 4rem;
+}
+
+main.index {
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - 4rem);
+}
+
+main.index a {
+	display: block;
+	z-index: 0;
+	opacity: 1;
+	width: 100%;
+	height: 30%;
+	flex-grow: 1;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	transition: opacity 0.3s ease-out;
+	margin-top: 1rem;
+}
+
+main.index a:hover,
+a.homeLink:hover {
+	opacity: 0.6;
+}
+
+main.index a:nth-child(1) {
+	background-image: url("../images/Recipe_Smoked_Gouda_Mushroom_Flatbread_with_Endive_Apple_Salad/square.jpg");
+}
+
+main.index a:nth-child(2) {
+	background-image: url("../images/Recipe_Bucatini_Alfredo_with_Broccoli/square.jpg");
+}
+
+main.index a:nth-child(3) {
+	background-image: url("../images/Recipe_Broccoli_Basil_Pesto_Sandwiches_with_Romaine_Citrus_Salad/square.jpg");
+}
+
+a.homeLink h3 {
+	text-align: center;
+	align-self: center;
+	justify-self: center;
+	font-family: "Quicksand", sans-serif;
+	font-weight: 300;
+}
+a.homeLink {
+	transition: opacity 0.3s ease-out;
+
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.search_item {
+	display: block;
+	padding: 0.5rem;
+}
+
+.search_item .img {
+	border: 3px solid white;
+	width: 100%;
+	padding-top: 55%;
+	background-size: cover;
+	background-position: center center;
+}
+.search_item:hover .img {
+	border: 3px solid #05386b;
+}
+
+.search_item h3 {
+	margin: 0;
+	font-family: "Quicksand", sans-serif;
+}
+
+.search_item h4 {
+	margin: 0;
+	font-family: "HelveticaNeue", sans-serif;
+	font-weight: 300;
+}
+
+div.filter {
+	position: relative;
+	top: 4rem;
+	width: 100%;
+	height: auto;
+	overflow-y: hidden;
+	transition: max-height 0.5s ease;
+	background-color: white;
+	max-height: 0rem;
+	box-sizing: content-box;
+}
+
+.filterOpen {
+	max-height: 15rem !important;
+}
+
+.filter h3 {
+	margin: 0;
+	font-family: "Quicksand", sans-serif;
+	font-size: 1.3rem;
+	color: #05386b;
+}
+
+ul {
+	margin: 0.5rem;
+	padding: 0;
+}
+
+.filter li {
+	display: inline-block;
+	font-family: "HelveticaNeue", sans-serif;
+	font-weight: 300;
+	color: white;
+	background-color: #7cbdff;
+	padding: 0.2rem 0.6rem;
+	margin-bottom: 0.3rem;
+	cursor: pointer;
+}
+
+.filter li:hover {
+	background-color: #2a66a2;
+}
+
+.recipe h1 {
+	font-family: "Quicksand", sans-serif;
+	font-size: 1.7rem;
+	color: #303236;
+}
+h2 {
+	font-family: "HelveticaNeue", sans-serif;
+	font-weight: 200;
+	margin: 0;
+	font-size: 1.1rem;
+	color: #6a6d75;
+}
+
+#hero {
+	width: 100%;
+	padding-top: 100%;
+	background-size: cover;
+	background-position: center center;
+}
+
+.recipe {
+	font-family: "HelveticaNeue", sans-serif;
+	font-weight: 300;
+	color: #6a6d75;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0 1rem;
+}
+
+p,
+h1 {
+	margin-top: 1rem;
+}
+img#ingredients {
+	display: none;
+}
+
+h3 {
+	font-family: "Quicksand", sans-serif;
+	font-size: 1.7rem;
+	color: #303236;
+	font-weight: 500;
+}
+h4 {
+	font-family: "Quicksand", sans-serif;
+	font-size: 1.3rem;
+	color: #303236;
+	font-weight: 500;
+}
+div.hr {
+	display: block;
+	margin: 1rem 0;
+	width: 100%;
+	height: 1px;
+	background-color: #d3d4d7;
+}
+
+.recipe table {
+	font-size: 1rem;
+	color: #303236;
+	font-family: "HelveticaNeue", sans-serif;
+	font-weight: 300;
+	margin: 1rem 1rem;
+	table-layout: fixed;
+}
+
+td:first-child {
+	width: 1px;
+	white-space: nowrap;
+	padding-right: 0.3rem;
+	vertical-align: top;
+}
+
+.recipe td:first-child {
+	text-align: right;
+	color: #6a6d75;
+	font-weight: 100;
+}
+
+.step img {
+	width: 100%;
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+.step:first-of-type img {
+	margin-top: 1rem;
+}
+
+.step:last-of-type {
+	margin-bottom: 2rem;
+}
+
+.step div.num {
+	display: inline-block;
+	background-color: #05386b;
+	color: white;
+	height: 2rem;
+	width: 2rem;
+	border-radius: 100%;
+	text-align: center;
+	font-weight: 200;
+}
+
+@media screen and (min-width: 600px) {
+	#hero {
+		padding-top: 60%;
+	}
+
+	.step img {
+		width: calc(100% - 2rem);
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+
+	.filter ul {
+		margin: 0.5rem 1rem;
+		border-left: 3px solid transparent;
+		border-right: 3px solid transparent;
+	}
+	div.search #logo {
+		display: block;
+	}
+
+	main.search {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	a.search_item {
+		width: calc(50% - 1.5rem);
+	}
+
+	.search_item:nth-child(1n) {
+		padding: 0;
+		margin: 1rem 0.5rem 1rem 1rem;
+	}
+	.search_item:nth-child(2n) {
+		padding: 0;
+		margin: 1rem 1rem 1rem 0.5rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#hero {
+		width: calc(100% - 2rem);
+		margin: 1rem;
+		padding-top: 50%;
+	}
+
+	img#ingredients {
+		display: block;
+		width: 483 px;
+		height: 330px;
+		flex-shrink: 1;
+	}
+
+	div.ingredients {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		max-width: 900px;
+	}
+
+	div.instructions {
+		display: flex;
+		flex-flow: row wrap;
+		width: 100%;
+		justify-content: space-evenly;
+	}
+
+	div.step h4 {
+		margin: 1rem 0rem;
+	}
+
+	div.step :not(h4) {
+		margin: 0 !important;
+		width: 100%;
+	}
+
+	div.step {
+		margin-top: 1rem;
+		width: calc(50% - 1.5rem);
+	}
+
+	div.step:nth-child(n + 3) {
+		margin-top: 3rem;
+	}
+
+	div.filter {
+		height: unset;
+	}
+
+	main.index {
+		flex-direction: row;
+	}
+
+	main.index > a {
+		margin-top: 0;
+		margin-right: 1rem;
+		width: 30%;
+		height: 100%;
+	}
+
+	main.index a:nth-child(1) {
+		margin-left: 1rem;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	main.recipe {
+		max-width: 1100px;
+		margin: auto;
+		padding-bottom: 4rem;
+	}
+
+	.recipeIntro {
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+	#hero {
+		order: 2;
+		width: 27rem;
+		height: 27rem;
+		flex-grow: 1;
+	}
+
+	.recipeIntro div {
+		width: 35%;
+	}
+
+	.filterOpen {
+		max-height: 10rem !important;
+	}
+	div.filter {
+		display: flex;
+	}
+	a.search_item,
+	.filter ul {
+		width: calc(33.3% - 1.3333rem);
+	}
+
+	.search_item:nth-child(3n-2),
+	.filter ul:nth-child(3n-2) {
+		margin: 1rem 0.5rem 1rem 1rem;
+	}
+	.search_item:nth-child(3n-1),
+	.filter ul:nth-child(3n-1) {
+		margin: 1rem 0.5rem 1rem 0.5rem;
+	}
+	.search_item:nth-child(3n),
+	.filter ul:nth-child(3n) {
+		margin: 1rem 1rem 1rem 0.5rem;
+	}
+}
