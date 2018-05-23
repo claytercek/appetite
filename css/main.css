@@ -1,33 +1,57 @@
 /*#region fonts*/
 @font-face {
 	font-family: "Quicksand";
-	src: url("../fonts/Quicksand-Bold.woff2") format("woff2"),
-		url("../fonts/Quicksand-Bold.woff") format("woff");
+	src: url("../fonts/Quicksand-Bold.woff2") format("woff2"), url("../fonts/Quicksand-Bold.woff") format("woff");
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Quicksand";
-	src: url("../fonts/Quicksand-Medium.woff2") format("woff2"),
-		url("../fonts/Quicksand-Medium.woff") format("woff");
+	src: url("../fonts/Quicksand-Medium.woff2") format("woff2"), url("../fonts/Quicksand-Medium.woff") format("woff");
 	font-weight: 500;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Quicksand";
-	src: url("../fonts/Quicksand-Regular.woff2") format("woff2"),
-		url("../fonts/Quicksand-Regular.woff") format("woff");
+	src: url("../fonts/Quicksand-Regular.woff2") format("woff2"), url("../fonts/Quicksand-Regular.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Quicksand";
-	src: url("../fonts/Quicksand-Light.woff2") format("woff2"),
-		url("../fonts/Quicksand-Light.woff") format("woff");
+	src: url("../fonts/Quicksand-Light.woff2") format("woff2"), url("../fonts/Quicksand-Light.woff") format("woff");
 	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url("../fonts/Ubuntu-Bold.woff2") format("woff2"), url("../fonts/Ubuntu-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url("../fonts/Ubuntu-Light.woff2") format("woff2"), url("../fonts/Ubuntu-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url("../fonts/Ubuntu-Regular.woff2") format("woff2"), url("../fonts/Ubuntu-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url("../fonts/Ubuntu-Medium.woff2") format("woff2"), url("../fonts/Ubuntu-Medium.woff") format("woff");
+	font-weight: 500;
 	font-style: normal;
 }
 
@@ -57,8 +81,7 @@
 
 @font-face {
 	font-family: "HelveticaNeue";
-	src: url("../fonts/HelveticaNeueBold.woff2") format("woff2"),
-		url("../fonts/HelveticaNeueBold.woff") format("woff");
+	src: url("../fonts/HelveticaNeueBold.woff2") format("woff2"), url("../fonts/HelveticaNeueBold.woff") format("woff");
 	font-weight: bold;
 	font-style: normal;
 }
@@ -97,8 +120,7 @@
 
 @font-face {
 	font-family: "HelveticaNeue";
-	src: url("../fonts/HelveticaNeueThin.woff2") format("woff2"),
-		url("../fonts/HelveticaNeueThin.woff") format("woff");
+	src: url("../fonts/HelveticaNeueThin.woff2") format("woff2"), url("../fonts/HelveticaNeueThin.woff") format("woff");
 	font-weight: 100;
 	font-style: normal;
 }
@@ -113,8 +135,7 @@
 
 @font-face {
 	font-family: "HelveticaNeue";
-	src: url("../fonts/HelveticaNeueBold.woff2") format("woff2"),
-		url("../fonts/HelveticaNeueBold.woff") format("woff");
+	src: url("../fonts/HelveticaNeueBold.woff2") format("woff2"), url("../fonts/HelveticaNeueBold.woff") format("woff");
 	font-weight: bold;
 	font-style: normal;
 }
@@ -124,6 +145,7 @@
 html {
 	font-size: 100%;
 	color: #303236;
+	scroll-behavior: smooth;
 }
 
 * {
@@ -151,7 +173,7 @@ header {
 }
 
 #logo {
-	font-family: "Quicksand", sans-serif;
+	font-family: "Ubuntu", "Quicksand", sans-serif;
 	color: white;
 	margin: 0;
 	flex-grow: 1;
@@ -161,8 +183,10 @@ a h1 {
 	margin: 0;
 }
 
-.searchIcon {
+.searchIcon,
+.gridIcon {
 	margin-top: 0.3rem;
+	margin-left: 1rem;
 	width: 2.5rem;
 	height: 2.5rem;
 	cursor: pointer;
@@ -195,12 +219,11 @@ header.search div.search {
 
 div.search input {
 	color: #05386b;
-	font-family: "Quicksand", sans-serif;
+	font-family: "Ubuntu", "Quicksand", sans-serif;
 	border: none;
 	border-radius: 0.7rem;
 	font-size: 1.5rem;
-	background: white url("../images/icons/search_blue.svg") 0.5rem center
-		no-repeat;
+	background: white url("../images/icons/search_blue.svg") 0.5rem center no-repeat;
 	width: calc(100% - 4.2rem);
 	padding: 0.3rem 0.5rem;
 	padding-left: 2.5rem;
@@ -272,7 +295,7 @@ a.homeLink h3 {
 	text-align: center;
 	align-self: center;
 	justify-self: center;
-	font-family: "Quicksand", sans-serif;
+	font-family: "Ubuntu", sans-serif;
 	font-weight: 300;
 }
 a.homeLink {
@@ -283,9 +306,19 @@ a.homeLink {
 	bottom: 0;
 }
 
-.search_item {
+main.search {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-top: 1rem;
+}
+a.search_item {
+	padding: 0;
 	display: block;
-	padding: 0.5rem;
+	transition: all 0.5s ease;
 }
 
 .search_item .img {
@@ -301,13 +334,15 @@ a.homeLink {
 
 .search_item h3 {
 	margin: 0;
-	font-family: "Quicksand", sans-serif;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 1.3rem;
 }
 
 .search_item h4 {
 	margin: 0;
 	font-family: "HelveticaNeue", sans-serif;
 	font-weight: 300;
+	font-size: 1.1rem;
 }
 
 div.filter {
@@ -328,7 +363,7 @@ div.filter {
 
 .filter h3 {
 	margin: 0;
-	font-family: "Quicksand", sans-serif;
+	font-family: "Ubuntu", sans-serif;
 	font-size: 1.3rem;
 	color: #05386b;
 }
@@ -354,8 +389,8 @@ ul {
 }
 
 .recipe h1 {
-	font-family: "Quicksand", sans-serif;
-	font-size: 1.7rem;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 1.5rem;
 	color: #303236;
 }
 h2 {
@@ -392,18 +427,18 @@ h1 {
 	margin-top: 1rem;
 }
 img#ingredients {
-	display: none;
+	width: 100%;
 }
 
 h3 {
-	font-family: "Quicksand", sans-serif;
-	font-size: 1.7rem;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 1.5rem;
 	color: #303236;
 	font-weight: 500;
 }
 h4 {
-	font-family: "Quicksand", sans-serif;
-	font-size: 1.3rem;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 1.1rem;
 	color: #303236;
 	font-weight: 500;
 }
@@ -455,11 +490,17 @@ td:first-child {
 	display: inline-block;
 	background-color: #05386b;
 	color: white;
-	height: 2rem;
-	width: 2rem;
+	height: 1.6rem;
+	width: 1.6rem;
 	border-radius: 100%;
 	text-align: center;
 	font-weight: 200;
+	font-size: 0.9rem;
+	padding-top: 0.1rem;
+}
+
+.selected {
+	background-color: #05386b !important;
 }
 
 @media screen and (min-width: 600px) {
@@ -483,25 +524,9 @@ td:first-child {
 	}
 
 	main.search {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-	a.search_item {
-		width: calc(50% - 1.5rem);
-	}
-
-	.search_item:nth-child(1n) {
-		padding: 0;
-		margin: 1rem 0.5rem 1rem 1rem;
-	}
-	.search_item:nth-child(2n) {
-		padding: 0;
-		margin: 1rem 1rem 1rem 0.5rem;
+		grid-template-columns: 1fr 1fr;
 	}
 }
-
 @media screen and (min-width: 768px) {
 	#hero {
 		width: calc(100% - 2rem);
@@ -511,27 +536,27 @@ td:first-child {
 
 	img#ingredients {
 		display: block;
-		width: 483 px;
-		height: 330px;
 		flex-shrink: 1;
+		max-width: 70%;
 	}
 
 	div.ingredients {
 		display: flex;
 		flex-flow: row;
 		justify-content: space-between;
-		max-width: 900px;
+		/* max-width: 900px; */
+		padding: 2rem;
 	}
 
 	div.instructions {
-		display: flex;
-		flex-flow: row wrap;
 		width: 100%;
-		justify-content: space-evenly;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 1rem;
 	}
 
 	div.step h4 {
-		margin: 1rem 0rem;
+		margin: 0.5rem 0rem;
 	}
 
 	div.step :not(h4) {
@@ -540,12 +565,8 @@ td:first-child {
 	}
 
 	div.step {
-		margin-top: 1rem;
-		width: calc(50% - 1.5rem);
-	}
-
-	div.step:nth-child(n + 3) {
-		margin-top: 3rem;
+		margin: 1.5rem;
+		margin-bottom: 3rem;
 	}
 
 	div.filter {
@@ -597,21 +618,7 @@ td:first-child {
 	div.filter {
 		display: flex;
 	}
-	a.search_item,
-	.filter ul {
-		width: calc(33.3% - 1.3333rem);
-	}
-
-	.search_item:nth-child(3n-2),
-	.filter ul:nth-child(3n-2) {
-		margin: 1rem 0.5rem 1rem 1rem;
-	}
-	.search_item:nth-child(3n-1),
-	.filter ul:nth-child(3n-1) {
-		margin: 1rem 0.5rem 1rem 0.5rem;
-	}
-	.search_item:nth-child(3n),
-	.filter ul:nth-child(3n) {
-		margin: 1rem 1rem 1rem 0.5rem;
+	main.search {
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 }

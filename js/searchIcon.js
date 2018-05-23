@@ -10,8 +10,7 @@
 		event.preventDefault();
 		if (event.keyCode === 13) {
 			var userInput = input.value;
-			window.location =
-				"search.php?text=" + encodeURIComponent(userInput);
+			window.location = "search.php?text=" + encodeURIComponent(userInput);
 		}
 	});
 	searchIcon.addEventListener("click", function() {
@@ -24,6 +23,7 @@
 	function openCloseFilter() {
 		if (!filterIsOpen) {
 			closeIcon.src = "images/icons/close_white.svg";
+			window.scrollTo(0, 0);
 		} else {
 			closeIcon.src = "images/icons/filter_white.svg";
 		}

@@ -91,6 +91,7 @@
 					<div class="num"><?php echo $i ?></div>
 					<?php echo $recipe["step_" . $i . "_title"] ?>	
 				</h4>
+				<div class="hr"></div>
 				<p><?php echo $recipe["step_" . $i ] ?></p>
 			</div>
 	

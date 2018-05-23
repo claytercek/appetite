@@ -1,8 +1,6 @@
 <?php
 	require "includes/db.php";
 
-
-
 	// Step 2: Preform Database Query
 	$table = "main";
 	$query = "SELECT * FROM {$table}";
@@ -11,6 +9,8 @@
 	if (!$result) {
 			die ("Database query failed.");
 	}
+
+	$tags=array('american','beef')
 ?>
 
 <html lang="en">
@@ -25,14 +25,14 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
     
-<body>
+<body id="top">
 
 	<?php require "includes/header_search.php" ?>
 	<main class="search">
 		<?php
 			while ($row = mysqli_fetch_assoc($result)) {
 		?>
-			<a class="search_item" href="recipe.php?id=<?php echo $row['id']; ?>">
+			<a class="search_item" href="recipe.php?id=<?php echo $row['id']; ?>" data-tags="<?php echo $row['tags']; ?>">
 				<div class="img" style="background-image:url('images/<?php echo $row['full_name']; ?>/square.jpg')"></div>
 				<div class="text">
 					<h3>
@@ -51,6 +51,7 @@
 			mysqli_close($connection);
 		?>
 	</main>
+	<script src="js/search.js"></script>
 </body>
 
 </html>

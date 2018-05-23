@@ -12,30 +12,30 @@
 		<img id="search" src="images/icons/search_white.svg" alt="search">
 	</div>
 </header>
-<div class="filter">
+<div id="filterDiv" class="filter">
 	<ul>
-		<h3>Protein</h3>
-		<li>Chicken</li>
-		<li>Beef</li>
-		<li>Fish</li>
-		<li>Pork</li>
-		<li>Vegetables</li>
+		<h3>protein</h3>
+		<li id="poultry">poultry</li>
+		<li id="beef">beef</li>
+		<li id="fish">fish</li>
+		<li id="pork">pork</li>
+		<li id="vegetarian">vegetarian</li>
 	</ul>
 	<ul>
-		<h3>Meal Type</h3>
-		<li>Soup</li>
-		<li>Salad</li>
-		<li>Sandwich</li>
-		<li>Pizza</li>
+		<h3>type</h3>
+		<li id="soup">soup</li>
+		<li id="salad">salad</li>
+		<li id="sandwich">sandwich</li>
+		<li id="pizza">pizza</li>
 	</ul>
 	<ul>
-		<h3>Dietary Restrictions</h3>
-		<li>Vegetarian</li>
-		<li>Vegan</li>
-		<li>Gluten Free</li>
+		<h3>cuisine</h3>
+		<li id="american">american</li>
+		<li id="italian">italian</li>
+		<li id="french">french</li>
+		<li id="french">mexican</li>
 	</ul>
 	
 </div>
-
 <script src="js/searchIcon.js"></script>
 
