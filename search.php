@@ -1,16 +1,15 @@
 <?php
 	require "includes/db.php";
-
+	$text = isset($_GET['text']) ? $_GET['text'] : null;
 	// Step 2: Preform Database Query
 	$table = "main";
-	$query = "SELECT * FROM {$table}";
+	$query = "SELECT * FROM `main` WHERE `title` LIKE '%{$text}%' OR `subtitle` LIKE '%{$text}%'";
 	$result = mysqli_query($connection, $query);
 	// Check there are no errors with our SQL statement
 	if (!$result) {
 			die ("Database query failed.");
 	}
 
-	$tags=array('american','beef')
 ?>
 
 <html lang="en">

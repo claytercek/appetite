@@ -31,7 +31,7 @@
 <html lang="en">
 
 <?php
-		while ($recipe = mysqli_fetch_assoc($result1)) {
+		$recipe = mysqli_fetch_assoc($result1)
 ?>
 
 <head>
@@ -100,8 +100,7 @@
 
 
 	</main>
-	<?php
-		}	
+	<?php	
 		// Step 4: Release Returned Data
 		mysqli_free_result($result1);
 		mysqli_free_result($result2);

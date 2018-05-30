@@ -19,9 +19,6 @@
 		<a href="recipe.php?id=3">
 		</a>
 	</main>
-	<a class="homeLink" href="search.php">
-		<h3>view all recipes</h3>
-	</a>
 </body>
 
 </html>

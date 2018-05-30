@@ -257,7 +257,7 @@ main {
 main.index {
 	display: flex;
 	flex-direction: column;
-	height: calc(100vh - 4rem);
+	height: 100vh;
 }
 
 main.index a {
