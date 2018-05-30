@@ -1,3 +1,4 @@
 **/images
 **/fonts
 includes/db.php
+error_log

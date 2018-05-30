@@ -12,12 +12,7 @@
 <body>
 	<?php include "includes/header.php"; ?>
 	<main class="index">
-		<a href="recipe.php?id=31">
-		</a>
-		<a href="recipe.php?id=5">
-		</a>
-		<a href="recipe.php?id=3">
-		</a>
+		<!-- TODO: add text n stuff -->
 	</main>
 </body>
 
