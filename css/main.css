@@ -255,17 +255,42 @@ main {
 }
 
 main.index {
-	height: 100vh;
-	background-image: url("../images/background/bg1.jpg");
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, 1fr);
+	height: 100%;
+	padding: 0.5rem;
+	padding-top: 4.5rem;
+}
+
+.heroText {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+}
+
+main.index a {
+	padding: 1rem;
+	margin: 0.5rem;
+	border: 0.5rem solid #05386b;
+	color: #303236;
+	font-size: 8vw;
+	text-align: center;
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 400;
 	background-size: cover;
-	background-repeat: norepeat;
 	background-position: center center;
 }
 
-@media screen and (max-aspect-ratio:1/1) {
-	main.index {
-		background-image: url("../images/background/bg1_rotated.jpg");
-	}
+main.index p {
+	font-size: 1rem;
+	font-weight: 300;
+	color: #6a6d75;
+}
+
+main.index .tablet {
+	display: none;
 }
 
 a.homeLink h3 {
@@ -335,7 +360,7 @@ div.filter {
 }
 
 .filterOpen {
-	max-height: 15rem !important;
+	max-height: 17rem !important;
 }
 
 .filter h3 {
@@ -485,6 +510,20 @@ td:first-child {
 		padding-top: 60%;
 	}
 
+	main.index {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		min-height: 700px;
+	}
+
+	main.index .tablet {
+		display: block;
+	}
+
+	main.index .heroText {
+		font-size: 2.5vw;
+	}
+
 	.step img {
 		width: calc(100% - 2rem);
 		margin-left: 1rem;
@@ -549,7 +588,6 @@ td:first-child {
 	div.filter {
 		height: unset;
 	}
-
 }
 
 @media screen and (min-width: 900px) {

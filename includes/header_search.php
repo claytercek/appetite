@@ -19,11 +19,11 @@
 		<li id="beef">beef</li>
 		<li id="fish">fish</li>
 		<li id="pork">pork</li>
+		<li id="shrimp">shrimp</li>
 		<li id="vegetarian">vegetarian</li>
 	</ul>
 	<ul>
 		<h3>type</h3>
-		<li id="soup">soup</li>
 		<li id="salad">salad</li>
 		<li id="sandwich">sandwich</li>
 		<li id="pizza">pizza</li>
@@ -33,7 +33,12 @@
 		<li id="american">american</li>
 		<li id="italian">italian</li>
 		<li id="french">french</li>
-		<li id="french">mexican</li>
+		<li id="mexican">mexican</li>
+		<li id="middle eastern">middle eastern</li>
+		<li id="mediterranean">mediterranean</li>
+		<li id="chinese">chinese</li>
+		<li id="asian">asian</li>
+		<li id="thai">thai</li>
 	</ul>
 	
 </div>
