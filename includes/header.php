@@ -1,6 +1,6 @@
 <header>
 	<a id="logo" href="index.php">
-		<h1 >appetize</h1>
+		<h1 >appetite</h1>
 	</a>
 	<a href="search.php">
 		<img class="gridIcon" src="images/icons/grid_white.svg" alt="menu">

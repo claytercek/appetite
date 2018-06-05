@@ -5,7 +5,7 @@
 <header class="search">
 	<div class="search">
 		<a id="logo" href="index.php">
-			<h1 >appetize</h1>
+			<h1 >appetite</h1>
 		</a>
 		<img id="filter" src="images/icons/filter_white.svg" alt="filter">
 		<input type="text" placeholder="search" value="<?php echo $text ?>">
