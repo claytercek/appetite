@@ -10,6 +10,9 @@
 		<img id="filter" src="images/icons/filter_white.svg" alt="filter">
 		<input type="text" placeholder="search" value="<?php echo $text ?>">
 		<img id="search" src="images/icons/search_white.svg" alt="search">
+		<a href="search.php">
+		<img  src="images/icons/grid_white.svg" alt="menu">
+	</a>
 	</div>
 </header>
 <div id="filterDiv" class="filter">

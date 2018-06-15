@@ -255,6 +255,8 @@ main {
 }
 
 main.index {
+	max-width: 2000px;
+	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(3, 1fr);
@@ -360,7 +362,7 @@ div.filter {
 }
 
 .filterOpen {
-	max-height: 17rem !important;
+	max-height: 21rem !important;
 }
 
 .filter h3 {
